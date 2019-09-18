@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-text: #40354E;
+  --color-primary: #FF596F;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-neutral-100: #f2f2f6;
+  --color-neutral-200: #d6dadf;
+  --color-neutral-500: #6e7582;
+
+  --lineHeight-medium: 1.6;
+
+  --fontSize-small: 14px;
+  --fontSize-medium: 16px;
+
+  --border-hairline: 1px solid var(--color-neutral-100);
+  --border-small: 2px solid var(--color-neutral-100);
+
+  --dimension: 4px;
+  --dimension-01: calc(var(--dimension) * 1); /* 4px */
+  --dimension-02: calc(var(--dimension) * 2); /* 8px */
+  --dimension-03: calc(var(--dimension) * 3); /* 12px */
+  --dimension-04: calc(var(--dimension) * 4); /* 16px */
+  --dimension-05: calc(var(--dimension) * 6); /* 24px */
+  --dimension-06: calc(var(--dimension) * 8); /* 32px */
+  --dimension-07: calc(var(--dimension) * 12); /* 48px */
+
+  --elevation-05: 0 8px 32px -12px rgba(0,0,0,0.4);
+
+  --radius-small: 4px;
+  --radius-medium: 8px;
+  --radius-circle: 100vh;
+}
+
+body {
+  width: 100%;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+.app {
+  width: 100%;
+  padding-bottom: 200px;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  padding: var(--dimension-04);
+  justify-content: center;
+}
+
+.nav a:link,
+.nav a:visited,
+.nav a:active {
+  display: block;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: bold;
+  padding: var(--dimension-02) var(--dimension-03);
+  font-size: var(--fontSize-small);
+}
+
+.nav a:hover {
+  color: var(--color-primary);
+}
+
+.nav a.activeNavLink {
+  color: var(--color-primary);
+}

@@ -1,0 +1,4 @@
+.scrollarea-content {
+  display: flex !important;
+  overflow-x: auto !important;
+}

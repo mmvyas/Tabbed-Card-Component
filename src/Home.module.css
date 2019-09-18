@@ -1,0 +1,231 @@
+.section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--dimension-04);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: var(--dimension-04) var(--dimension-06);
+  }
+}
+
+.list,
+.text {
+  display: block;
+  max-width: 640px;
+  margin-bottom: var(--dimension-04);
+  margin-top: 0;
+  line-height: var(--lineHeight-medium);
+}
+
+.subHeading {
+  display: block;
+  font-size: var(--fontSize-medium);
+  /* font-weight: normal; */
+  color: var(--color-neutral-500);
+}
+
+.list li {
+  margin-bottom: var(--dimension-03);
+}
+
+.dialog {
+  width: 100%;
+  display: block;
+}
+
+.callout {
+  background: var(--color-neutral-100);
+  padding: var(--dimension-04);
+  border-radius: var(--radius-medium);
+  font-size: var(--fontSize-small);
+}
+
+.callout p:last-child {
+  margin-bottom: 0;
+}
+
+.attachments {
+  display: flex;
+  margin-top: var(--dimension-04);
+}
+
+.attachments a {
+  margin-right: var(--dimension-04);
+  width: 200px;
+  height: 130px;
+  display: block;
+  border-radius: var(--radius-medium);
+  background-size: cover;
+  border: var(--border-hairline);
+  position: relative;
+  color: var(--color-text);
+}
+
+.attachments a > span {
+  background: var(--color-white);
+  border: var(--border-small);
+  border-radius: var(--radius-small);
+  position: absolute;
+  font-size: var(--fontSize-small);
+  top: 4px;
+  padding: var(--dimension-01);
+  right: 4px;
+}
+
+.conversation {
+  margin-top: var(--dimension-06);
+  width: 100%;
+  background-color: var(--color-neutral-100);
+  padding: var(--dimension-06) var(--dimension-04);
+  margin-bottom: var(--dimension-06);
+}
+
+
+@media (min-width: 960px) {
+  .conversation {
+    width: auto;
+    max-width: 990px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: var(--dimension-07);
+    border-radius: var(--radius-medium);
+  }
+}
+
+.speech {
+  width: 100%;
+  max-width: 980px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0 auto var(--dimension-07);
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.speech:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 32px;
+  height: var(--dimension-07);
+  background: url('./scribble.svg');
+  background-size: cover;
+  bottom: 0;
+  transform: translateY(100%);
+  left: 40%;
+  opacity: 0.4;
+}
+
+.speech.reverse:after {
+  transform: translateY(100%) scaleX(-1);
+  left: auto;
+  right: 40%;
+}
+
+.speech:last-child {
+  margin-bottom: 0;
+}
+
+.speech:last-child:after {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .speech {
+    flex-wrap: nowrap;
+  }
+}
+
+.speechBody {
+  display: flex;
+  flex: 1 1 0;
+  width: 100%;
+  max-width: 640px;
+  min-width: 0;
+}
+
+.speech.reverse .speechBody {
+  order: -1;
+}
+
+.speechBubble {
+  width: 100%;
+  border-radius: var(--radius-medium);
+  background: white;
+  box-shadow: var(--elevation-05);
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.speechCharacter {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .speechCharacter {
+    display: block;
+    width: 200px;
+    height: auto;
+    border-radius: 0;
+    overflow: visible;
+    border: none;
+    margin-bottom: 0px;
+    mix-blend-mode: darken;
+  }
+}
+
+.speechCharacter img {
+  width: 100%;
+  height: auto;
+}
+
+.speechContent {
+  min-width: 300px;
+  padding: var(--dimension-04);
+  font-size: 90%;
+  line-height: var(--lineHeight-medium);
+}
+
+@media (min-width: 768px) {
+  .speechContent {
+    padding: var(--dimension-06);
+  }
+}
+
+.speechHeader {
+  border-bottom: var(--border-small);
+  padding-left: 90px;
+  display: flex;
+  align-items: center;
+  padding: var(--dimension-04);
+}
+
+@media (min-width: 768px) {
+  .speechHeader {
+    padding: var(--dimension-04) var(--dimension-06);
+  }
+}
+
+.speechAvatar {
+  margin-right: var(--dimension-04);
+  border-radius: var(--radius-circle);
+  width: var(--dimension-07);
+  height: var(--dimension-07);
+  background-size: 200%;
+  background-position: center top;
+  border: var(--border-small);
+}
+
+.speechUserRole {
+  margin-top: var(--dimension-01);
+  color: var(--color-neutral-500);
+  font-size: var(--fontSize-small);
+}
